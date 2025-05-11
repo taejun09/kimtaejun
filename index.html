@@ -1,222 +1,120 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>KIM TAEJUN · Portfolio</title>
-        <link href="taejun.css" rel="stylesheet" type="text/css"/>
-        <link rel="manifest" href="manifest.json">
-    </head>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <title>KIM TAEJUN · Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="/assets/image/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/image/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/image/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/image/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/image/site.webmanifest" />
+  <style>
+    .tossface {
+      font-family: Tossface;
+      font-size: 1.7rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#121212] text-gray-200 overflow-x-hidden">
+
+
+  <header class="bg-[#1e1e1e] rounded-2xl border border-gray-700 p-4 mx-4 mt-4 flex items-center justify-between md:mx-auto md:max-w-7xl md:px-10 md:py-6 shadow-lg">
+     <h1 class="text-xl md:text-3xl font-bold text-white flex items-center">
+    <span class="tossface text-2xl mr-2">#️⃣</span>
+    KIM TAEJUN
+  </h1>
     
-    <script>
+<button id="menu-btn" class="block md:hidden">
+  <svg id="hamburger-icon" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" 
+       viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" 
+          d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+  <svg id="close-icon" class="w-6 h-6 text-white hidden" fill="none" stroke="currentColor" stroke-width="2" 
+       viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" 
+          d="M6 18L18 6M6 6l12 12"></path>
+  </svg>
+</button>
 
-        if ('serviceWorker' in navigator) {
-     
-           navigator.serviceWorker.register('sw.js').then((reg) => {
-     
-           console.log('ServiceWorker register complete', reg);
-     
-          });
-     
-     }
-     
-     </script>
-    <body>
-        <div class="page-wrapper">
-            <main class="main-wrapper">
-                <nav class="navigation">
-                    <a href="https://taejun09.github.io/kimtaejun" aria-current="page" class="brand-link inline-block current">
-                        <div class="logo-flex">
-                            <img src="https://taejun09.github.io/kimtaejun/assets/image/logo-img.png" loading="lazy" alt="메인로고" class="logo"/>
-                            <img src="https://taejun09.github.io/kimtaejun/assets/image/copyright-img.png" loading="lazy" alt="저작권 아이콘" class="copyright"/>
-                        </div>
-                    </a>  
-                </nav>
-                <section class="home-section">
-                    <div class="padding-global">
-                        <div class="container-large">
-                            <div class="padding-top padding-huge">
-                                <div class="layout-grid card-grid">
-                                    <div id="short-introduction" class="content-block-item first">
-                                        <div class="layout-grid area-grid">
-                                            <h1 id="animated-text" class="heading-style-h2">
-                                                <strong>
-                                                    <span class="greeting-text">안녕하세요,</span>
-                                                    <span class="spacer"></span> 저는 
-                                                    <span class="underline-container">
-                                                        <span id="changing-text" class="fade-text">김태준</span>
-                                                        <span class="underline"></span>
-                                                    </span> 
-                                                    <span class="fixed-text">입니다.</span>
-                                                </strong>
-                                            </h1>
-                                               
-                                            
-                                            <script>
-                                                const words = ["김태준", "개발자", "디자이너", "학생"];
-                                                let wordIndex = 0;
-                                                const textElement = document.querySelector("#changing-text");
-                                            
-                                                function changeText() {
-                                                    textElement.classList.add("fade-out");
-                                                    setTimeout(() => {
-                                                        wordIndex = (wordIndex + 1) % words.length;
-                                                        textElement.textContent = words[wordIndex];
-                                                        textElement.classList.remove("fade-out");
-                                                    }, 800);
-                                                }
-                                            
-                                                setInterval(changeText, 3000);
-                                            </script>
-                                            
-                                            <div id="contact-sns" class="social-link-flex">
-                                                <a href="https://www.instagram.com/taeju_n0527/" target="_blank" class="social-link-item inline-block">
-                                                    <div class="social-icon"></div>
-                                                    <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="social-bg"></div>
-                                                </a>
-                                                <a href="mailto:ktjlove0527@gmail.com" class="social-link-item inline-block">
-                                                    <div class="social-icon">✉</div>
-                                                    <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                                                -moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                                                -ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                                                                transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" 
-                                                        class="social-bg">
-                                                    </div>
-                                                </a>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
+    <nav class="hidden md:flex md:gap-8 text-gray-300 font-semibold md:text-lg">
+      <a href="https://taejun0527.notion.site/1f0e9f60ff0280bea09fcf13d9024035#1f0e9f60ff028155b596f3130bbbbf55" class="hover:text-blue-400">프로젝트</a>
+      <a href="https://taejun0527.notion.site/1f0e9f60ff0280bea09fcf13d9024035#1f0e9f60ff028172986acbebfd4b21e9" class="hover:text-blue-400">프로필</a>
+    </nav>
+  </header>
 
-                                    
-                                    <div id="profile-img" class="content-block-item flex-center">
-                                        <div class="photo-wrapper">
-                                            <img src="https://ifh.cc/g/TlpOLA.jpg" loading="lazy" alt="프로필 이미지" class="profile-image"/>
-                                            <img src="https://taejun09.github.io/kimtaejun/assets/image/circle-text-img.png" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.35, 1.35, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.35, 1.35, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.35, 1.35, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.35, 1.35, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="원형 타이틀" class="circle-text"/>
-                                        </div>
-                                    </div>
-                                    <div id="about-me" class="content-block-item about inline-block">
-                                        <div class="layout-grid area-grid">
-                                            <p id="about-me-text" class="text-size-medium text-color-gray">
-                                                <span class="asterisk"><i class="fa-solid fa-infinity" style="color: #828282; font-size: 0.9em;"></i></span>
-                                                <br/>안녕하세요! 저는 개발과 디자인을 좋아하며, <br> 새로운 프로젝트에 도전하는 걸 즐기는 김태준입니다.
-                                                <br> <br> 
-                                                “크게 꿈꾸고, 실패할 용기를 가져라.”  
-                                                <br> 
-                                                <span style="font-size: 0.7em;">– Norman Vaughan (노먼 본, 미국 탐험가)</span>
-                                            </p>
-                                            <div id="card-spacing" class="card-bottom-flex">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div id="portfolio-1" class="content-block-item project">
-                                        <div class="dyn-list">
-                                            <div role="list" class="project-list-wrapper dyn-items">
-                                                <div role="listitem" class="project-item dyn-item">
-                                                    <a href="https://taejun09.github.io/jungang/pc" class="project-link inline-block">
-                                                        <img loading="lazy" alt="군산중앙고스테이 홈페이지 제작 이미지" src="https://taejun09.github.io/kimtaejun/assets/image/project1-img.png" class="project-image"/>
-                                                        <div class="layout-grid project-grid">
-                                                            <div id="card-spacing1" class="card-bottom-flex">
-                                                                <div class="subtitle-flex">
-                                                                    <div class="dot black"></div>
-                                                                    <div class="text-size-tiny text-style-allcaps text-color-black">군산중앙스테이 홈페이지 제작 · PC전용</div>
-                                                                </div>
-                                                                <div class="arrow-item project">
-                                                                    <div class="arrow-card">east</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="portfolio-2" class="content-block-item project">
-                                        <div class="dyn-list">
-                                            <div role="list" class="project-list-wrapper dyn-items">
-                                                <div role="listitem" class="project-item dyn-item">
-                                                    <a href="https://taejun09.github.io/jungang/" class="project-link inline-block">
-                                                        <img loading="lazy" alt="군산중앙고스테이 제작 이미지" src="https://taejun09.github.io/kimtaejun/assets/image/project2-img.png" class="project-image"/>
-                                                        <div class="layout-grid project-grid">
-                                                            <div id="card-spacing2" class="card-bottom-flex">
-                                                                <div class="subtitle-flex">
-                                                                    <div class="dot black"></div>
-                                                                    <div class="text-size-tiny text-style-allcaps text-color-black">군산중앙스테이 제작 · 모바일전용</div>
-                                                                </div>
-                                                                <div class="arrow-item project">
-                                                                    <div class="arrow-card">east</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a id="see-my-profile" href="https://taejun09.github.io/kimtaejun/projects" class="content-block-item projects inline-block">
-                                        <div class="layout-grid area-grid">
-                                            <h2 id="heading-style" class="heading-style-h3">
-                                                See my <span class="text-color-gray">PROFILE & PROJECT</span>
-                                            </h2>
-                                            <div id="card-spacing3" class="card-bottom-flex">
-                                                <div class="subtitle-flex">
-                                                </div>
-                                                <div class="arrow-item">
-                                                    <div class="arrow-card">east</div>
-                                                    <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="arrow-bg"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </section>
-                
-                
-                <footer>
-                    <div class="padding-global">
-                        <div class="container-large">
-                            <div class="footer-padding">
-                                <div class="layout-grid footer-grid">
-                                    <a href="https://taejun09.github.io/kimtaejun" aria-current="page" class="brand-link inline-block current">
-                                        <div class="logo-flex">
-                                            <img src="https://taejun09.github.io/kimtaejun/assets/image/logo-img.png" loading="lazy" alt="메인로고" class="logo"/>
-                                            <img src="https://taejun09.github.io/kimtaejun/assets/image/copyright-img.png" loading="lazy" alt="저작권 아이콘" class="copyright"/>
-                                        </div>
-                                    </a>
-                                    <div id="footer-flex" class="layout-hflex footer-flex">
-                                        <a href="javascript:void(0);" class="footer-nav-link inline-block" onclick="showCopyrightPopup()">
-                                            <div class="footer-nav-text"> © 2025 Kim Taejun. All Rights Reserved. Designed & Developed by Kim Taejun.</div>
-                                        </a>
-                                    </div>
-                                    
+  <div id="mobile-menu" class="hidden md:hidden mx-4 mt-2 bg-[#1e1e1e] rounded-xl shadow-md p-4">
+    <a href="https://taejun0527.notion.site/1f0e9f60ff0280bea09fcf13d9024035#1f0e9f60ff028155b596f3130bbbbf55" class="block py-1 text-gray-300 hover:text-blue-400">프로젝트</a>
+    <a href="https://taejun0527.notion.site/1f0e9f60ff0280bea09fcf13d9024035#1f0e9f60ff028172986acbebfd4b21e9" class="block py-1 text-gray-300 hover:text-blue-400">프로필</a>
+  </div>
 
-                        <div id="copyright-popup" class="popup-overlay" style="display: none;">
-                            <div class="popup-box">
-                                <img src="https://taejun09.github.io/kimtaejun/assets/image/open-copytight-img.png" alt="공공누리 마크" class="popup-image">
-                                 <h3>웹사이트 저작권 안내</h3>
-                            <p>
-                                본 웹사이트의 모든 콘텐츠는 관련 법령에 따라 보호됩니다.  
-                                허가 없이 무단 복제 및 배포하는 행위를 금지하며, 이용 시 출처를 명확히 표시해야 합니다.
-                            </p>
-                            <p>
-                                 일부 콘텐츠는 공공저작물 자유이용허락 기준(공공누리, KOGL)에 따라 이용이 가능할 수 있습니다.  
-                                사용 전에 해당 표시가 있는지 확인하세요.
-                         </p>
-                            <button onclick="closePopup()">확인</button>
-                        </div>
-                    </div>
+<section id="section1"
+  class="w-full h-[40vh] md:h-[80vh] mt-6 px-4 md:px-0 md:mx-auto md:max-w-7xl rounded-2xl overflow-hidden shadow-lg relative">
+  <img src="/assets/image/section1.png" alt="섹션 1 이미지" class="w-full h-full object-cover rounded-2xl" />
+  <a id="smooth-link"
+     href="https://taejun0527.notion.site/1f0e9f60ff0280bea09fcf13d9024035#1f0e9f60ff028172986acbebfd4b21e9"
+     class="absolute bottom-4 right-5 bg-slate-700 hover:bg-slate-600 text-white text-sm md:text-base font-semibold py-2 px-4 md:px-6 rounded-xl shadow-md transition-all">
+    자세히 보기 →
+  </a>
+</section>
+
+<section id="section2"
+  class="w-full h-[40vh] md:h-[80vh] mt-6 px-4 md:px-0 md:mx-auto md:max-w-7xl rounded-2xl overflow-hidden shadow-lg relative">
+  <img src="/assets/image/section2.png" alt="섹션 2 이미지" class="w-full h-full object-cover rounded-2xl" />
+  <a id="smooth-link"
+     href="https://taejun0527.notion.site/1f0e9f60ff0281219926ed8ee62926bf"
+     class="absolute bottom-4 right-5 bg-slate-700 hover:bg-slate-600 text-white text-sm md:text-base font-semibold py-2 px-4 md:px-6 rounded-xl shadow-md transition-all">
+    자세히 보기 →
+  </a>
+</section>
 
 
-                    <script>
-                function showCopyrightPopup() {
-    document.getElementById("copyright-popup").style.display = "flex";
-}
+<footer class="bg-[#1e1e1e] text-center py-4 mt-6">
+  <p class="text-gray-400 text-sm">
+    © 2025 KIM TAEJUN. All Rights Reserved. Designed & Developed by KIM TAEJUN.
+  </p>
+</footer>
 
-                    function closePopup() {
-    document.getElementById("copyright-popup").style.display = "none";
-}
-                    </script>
-                                    
-                             </footer>
-                        </main>
-                    </div>
-                </body>
-            </html>
+<div id="transition-spinner" class="fixed inset-0 flex items-center justify-center bg-[#121212] bg-opacity-90 opacity-0 pointer-events-none transition-opacity duration-500 z-50">
+  <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-400 border-opacity-60"></div>
+</div>
+
+
+<script>
+document.getElementById("smooth-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    const link = this.href;
+
+    const spinner = document.getElementById("transition-spinner");
+    spinner.classList.remove("opacity-0", "pointer-events-none");
+    spinner.classList.add("opacity-100");
+
+    document.body.style.transition = "opacity 0.5s";
+    document.body.style.opacity = 0.5;
+
+    setTimeout(() => {
+      window.location.href = link;
+    }, 800);
+  });
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  
+  hamburgerIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+  
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenu.classList.toggle('hidden');
+});
+  </script>
+</body>
+</html>
+        
+
